@@ -1,4 +1,3 @@
-import { AuthProvider } from "@/context/AuthContext";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -16,9 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-gray-50">
-      <body className={inter.className}>
-        <AuthProvider>{children}</AuthProvider>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
